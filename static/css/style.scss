@@ -1,0 +1,116 @@
+*{ margin: 0; padding: 0;}
+html,body{ width: 100%; height: 100%; font-family: "微软雅黑"; font-size: 14px;}
+a{ text-decoration: none;}
+ul li{ list-style-type: none;}
+img{ max-width: 100%; display: block;}
+.cl{ clear: both;}
+.flex{ display: flex; display: -webkit-flex; flex-direction: row; align-items: center; justify-content:space-between;
+    input[type=text]{width: 85%; padding: 5px 10px; border-radius: 5px; border: 1px solid #ccc;}
+    button{ width: 13%; margin-left: 1%; text-align: center; padding: 5px 0px; border-radius: 5px; border: 0; cursor: pointer;}
+}
+.header{ width: 100%; border-bottom: 1px solid #ccc; padding: 10px 25px; box-sizing: border-box;}
+.ListView{ overflow: hidden; height: 100%;}
+.outLogin span{ color: #3caada; margin-left: 5px; cursor: pointer;}
+.menuList{
+    width: 13%; height: 100%; float: left; background: #f2f2f2; border-right: 1px solid #ccc; box-sizing: border-box;
+    dl{ margin-top: 10px;}
+    dt{ width: 100%; box-sizing: border-box; padding: 0px 10px; height: 45px; line-height: 45px; font-size: 16px; font-weight: 600; cursor: pointer;}
+    dd{
+        width: 100%; height: 40px;  padding: 0px 10px; line-height: 40px; font-size: 14px; text-indent: 25px; cursor: pointer;
+        &.active,&:hover{ background: #fff;}
+    }
+}
+.routerView{ width: 87%; float: right; height: 100%;}
+.main{ height: 100%; overflow: auto; box-sizing: border-box; padding: 15px;
+    h2{ font-size: 22px; line-height: 45px; padding-bottom: 25px;}
+}
+.table{ width: 100%;}
+.table *{ box-sizing: border-box; padding: 12px 15px 12px 5px; vertical-align: middle !important; border-bottom: 1px solid #ccc;}
+.table thead tr th{ background: #f1f1f1;}
+.create{ width: 100%; overflow: auto; height: 100%;}
+.createFM{ width: 24%; float: left; box-sizing: border-box; padding: 10px; border: 1px solid #ccc;}
+.createWrap{ width: 100%; box-sizing: border-box; padding: 10px 25px; overflow: hidden;}
+.createWrap h2{ margin-bottom: 20px;}
+.createFMImage{ width: 100%; border: 1px solid #f1f1f1; box-sizing: border-box;}
+.createFMImage img{ width: 100%; height: 120px;}
+.createFMImage input{ border:0px; width: 100%; outline: none; border-top: 1px solid #f1f1f1; margin-top: 15px; text-align: center; line-height: 40px; display: block; color: #666;}
+.createFM h4{ margin: 10px 0px;}
+.createBox{ width: 75%; float: left; margin-left: 1%; box-sizing: border-box; padding: 15px;}
+.createFM ul li{ width: 96%; margin-left: 4%; height: 40px; line-height: 40px;}
+.createFM ul li.active{ width: 100%; font-weight: 900; margin-left: 0px; border-top: 1px solid #ccc;}
+.createBox ul li{
+    width: 100%; box-sizing:border-box; padding: 0px 10px; border-bottom: 1px solid #ccc; height: 40px; line-height: 40px; text-indent: 25px;
+    p{ float: left;}
+    span{ float: right; font-size: 14px; cursor: pointer; margin: 0px 7px;}
+    &.active{ font-weight: 600; font-size: 22px; text-indent: 0px; height: 60px; line-height: 60px;}
+}
+.filexbg{ width: 100%; height: 100%; position: fixed; left: 0; top: 0; z-index: 3; background:rgba(0,0,0,0.7);
+    
+}
+.filexbox{ background: #fff; box-sizing: border-box; padding: 15px; border-radius: 5px; width: 500px; position: fixed; left: 50%; margin-left: -250px; top: 50%;
+    .filexbox_title{ height: 25px; line-height: 25px;}
+    span{ float: right; cursor: pointer;}
+    span:before{ content: '\2715'; color: #000;}
+}
+.btn-wrap{
+    display: flex; display: -webkit-flex; flex-direction: row; justify-content: space-between; box-sizing: border-box; margin-top: 25px;
+    .btn-block{height: 55px; cursor: pointer; margin: 0px 10px; line-height: 55px; background:#fff; color: #666; border: 1px solid #dadada; flex:1; text-align: center;}
+    .btn-block:hover{ background: #f1f1f1;}
+}
+
+.createInfo{ width: 100%; height: 100%; box-sizing: border-box; padding: 15px 25px;
+    .Info{ width: 81%; float: left; height: 100%; overflow: auto; border: 1px solid #ccc; box-sizing: border-box; padding: 10px;}
+    .addBlock{ width: 17%; float: right;
+        ul li{ width: 100%; height: 55px; line-height: 55px; text-align: center; color: #222; cursor: pointer; border: 1px solid #ccc;}
+    }
+}
+.itemView{
+    .title{
+        padding-bottom: 10px; border-bottom: 1px dashed #ccc;
+        h4{ display: block; padding: 10px 0px; float: left;}
+        p{ float: right;}
+        input{ width: 100%; border: 1px solid #dadada; height: 40px; line-height: 40px; border-radius: 5px; box-sizing: border-box; padding: 0px 10px; color: #666; margin-bottom: 10px;}
+    }
+    .content{
+        padding-bottom: 10px; border-bottom: 1px dashed #ccc;
+        h4{ display: block; padding: 10px 0px; float: left;}
+        p{ float: right;}
+        textarea{ width: 100%; border: 1px solid #dadada; height: 120px; line-height: 25px; border-radius: 5px; box-sizing: border-box; padding: 0px 10px; color: #666; margin-bottom: 10px;}
+    }
+    .block{
+        padding-bottom: 10px; border-bottom: 1px dashed #ccc; position: relative; overflow: hidden;
+        h4{ display: block; padding: 10px 0px; float: left;}
+        p{ float: right;}
+    }
+    .TableBlock{
+        padding-bottom: 10px; border-bottom: 1px dashed #ccc; position: relative; overflow: hidden;
+        h4{ display: block; padding: 10px 0px; float: left;}
+        p{ float: right;}
+        table{ width: 100%;  border-collapse:collapse;}
+        table *{ background: #f1f1f1; padding: 10px; border: 1px solid #ccc; text-align: center; vertical-align: middle;}
+    }
+}
+.filebg{ width: 66px; height: 66px; position: relative; margin: 0px 15px 5px 0px; display: inline-block; border: 1px dashed #ccc;
+    .progress{position: absolute; left: 0; top: 0; z-index: 99; width: 100%; height: 100%; background: rgba(0,0,0,0.98); color: #fff; display: flex; display: -webkit-flex; justify-content: center; align-items: center;}
+}
+.filebg b{ display: block; width: 20px; height: 20px; position: absolute; right: -10px; top: -10px; background: #000; z-index: 99; color: #fff; border-radius: 50%; font-size: 12px; text-align: center; line-height: 20px;}
+.filebg b:before{content: '\2715';}
+.filebg img{ width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: 2;}
+.filebg_before{width: 80%; position: absolute; height: 1px; left: 10%; border-bottom: 1px dashed #ccc; top: 50%; margin-top: -1px;}
+.filebg_after{ height: 80%; position: absolute; width: 1px; top: 10%; border-left: 1px dashed #ccc; left: 50%; margin-left: -1px;}
+.filebg input[type=file]{ opacity: 0; width: 100%; height: 100%; position: absolute; left: 0; top: 0; cursor: pointer; z-index: 3;}
+.from_title{ margin-bottom: 15px;}
+.from_content{ width: 100%; height: 35px; line-height: 35px; border: 1px solid #ccc; border-radius: 5px; text-indent: 10px; color: #666;}
+.TableBlock{ width: 100%;}
+.flex-row{ width: 100%; display: flex; display: -webkit-flex; flex-direction: row; border-right: 1px solid #ebebeb; box-sizing: border-box;}
+.flex-cell{ border: 1px solid #ebebeb; border-right: 0px; border-collapse:collapse; box-sizing: border-box; text-align: center; font-size: 14px; box-sizing: border-box; border-top:0px; padding: 10px; align-items: stretch; word-wrap : break-word; display: flex; display: -webkit-flex; flex-direction: column; justify-content: center;
+    input,textarea{ border: 1px solid #dadada; padding: 10px; width: 100%; box-sizing: border-box;}
+    input{ height: 60px; text-align: center;}
+}
+.videoSelect{
+    h2{ display: block; padding: 10px 0px; margin-top: -35px;}
+    input{ display: block; border: 1px solid #dadada; width: 100%; padding: 10px; color: #666; box-sizing: border-box; margin-bottom: 15px;}
+    img{ width: 100%;}
+    button{ width: 100%; cursor: pointer; display: block; text-align: center; padding: 10px 0px; background: #fff; color: #666; margin-top: 15px; border: 1px solid #dadada;}
+}
+.iphoneBox{ width: 360px; box-sizing: border-box; padding: 87px 28px 89px 29px; overflow: hidden; height: 714px; position: fixed; left: 50%; top: 50%; margin-left: -185px; margin-top: -388px; background: url('../img/iphone.png') no-repeat;}
