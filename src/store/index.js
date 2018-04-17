@@ -6,11 +6,13 @@ import mutations from './Mutations.js'
 import sample from './sample.js'
 
 import actions from './Actions.js'
+import dataEchart from './dataEchart.js'
 
 export default new Vuex.Store({
-	modules:{
-		mutations,
-		sample
-	},	
-	actions	
+  modules:{
+    mutations,
+    sample
+  },
+  actions,
+  dataEchart
 })

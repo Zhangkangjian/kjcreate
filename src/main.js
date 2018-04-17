@@ -5,9 +5,12 @@ import App from './App'
 import router from './router'
 import store from './store'
 import extend from './assets/extend.js'
+import echarts from 'echarts'
 import './../static/css/style.scss'
 
+
 Vue.prototype.extend = extend
+Vue.prototype.$echarts = echarts
 
 Vue.config.productionTip = false
 /* eslint-disable no-new */

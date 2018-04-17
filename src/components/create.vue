@@ -19,25 +19,25 @@
 						</transition-group>
 					</draggable>
 				</ul>
-				
+
 				<div class="btn-wrap">
-					<button class="btn-block" @click="addBlock">添加模块</button>					
+					<button class="btn-block" @click="addBlock">添加模块</button>
 					<button class="btn-block" @click="preview">预览</button>
 					<button class="btn-block" @click="savePage">保存页面</button>
 				</div>
-				
+
 			</div>
 		</div>
-		
+
 		<model :height='85' v-if='data.model'>
 			<div class="flex" slot='model'>
 				<input type="text" v-model="modelText" />
 				<button @click="modelBtn(modelNum)">提交</button>
 			</div>
 		</model>
-		
-		<preview :preview='previewList' :fengmian='true' v-if="data.previewShow"></preview>		
-		<loading v-if='data.loading'></loading>		
+
+		<preview :preview='previewList' :fengmian='true' v-if="data.previewShow"></preview>
+		<loading v-if='data.loading'></loading>
 	</div>
 </template>
 
@@ -100,8 +100,8 @@
 			remove: function(i) {
 				this.$store.dispatch('removeList', i)
 			},
-			Pagecont: function(i) {				
-				var self = this 
+			Pagecont: function(i) {
+				var self = this
 				this.$router.push({
 					path: '/createInfo/' + i,
 					query:self.href
@@ -123,7 +123,7 @@
 				var self = this
 				$.each(self.getsampleArray.sampleArray.samplePageList, function(i, v) {
 					v.samplePage.sequence = i
-				});				
+				});
 				self.previewList = self.getsampleArray.sampleArray.samplePageList
 				this.$store.dispatch('previewShow',true)
 			},
@@ -136,12 +136,12 @@
 			var pageid = this.$route.query.query
 			self.pageid = pageid
 			if(pageid) {
-			
+
 				if(self.$route.query.sampleMasterId&&self.$route.query.sampleId){
 					self.sampleId = self.$route.query.sampleId
 					self.sampleMasterId = self.$route.query.sampleMasterId
 					self.href = self.$route.query
-				}		
+				}
 				console.log(self.$route.params.loading)
 				if(self.$route.params.loading){
 					this.$store.dispatch('setSampleDetail', {
