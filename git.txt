@@ -1,3 +1,6 @@
+
+https://blog.csdn.net/zamamiro/article/details/70172900
+
 整个流程在dev分支上
 
 1.获取状态
@@ -19,3 +22,30 @@
 
 	git reset --hard HEAD^
 
+7.提交github
+
+	git push origin master
+
+8.下载GitHub项目
+
+	git clone https://github.com/xxx
+
+9.当前分支
+
+	git branch
+
+10.切换分支
+	
+	git checkout master
+
+11.合并分支
+
+	git merge dev
+
+12.删除分支
+
+	git branch -d dev
+
+13.创建分支
+
+	git checkout -b dev
